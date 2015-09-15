@@ -1,0 +1,17 @@
+<HTML>
+	<HEAD>
+		<META NAME="GENERATOR" Content="Microsoft Developer Studio">
+		<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+		<TITLE>Document Title</TITLE>
+	</HEAD>
+	<BODY>
+		<H1>Behold, the need for <i>IDispatch</i>.</H1>
+		<SCRIPT language="VBScript">		
+		Dim o 
+		Set o = CreateObject("RawComCar.ScriptableCar")
+		o.CrankTunes
+		o.Speed = 100
+		MsgBox o.Speed
+		</SCRIPT>
+	</BODY>
+</HTML>

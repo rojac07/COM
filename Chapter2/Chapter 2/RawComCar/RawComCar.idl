@@ -1,0 +1,71 @@
+// Note that the same [uuid] attribute is used for 
+// IIDs, CLSIDs and LIBIDs.
+//
+// This is the only standard IDL we need.
+// it included unknwn.idl and wtypes.idl.
+import "oaidl.idl";
+
+// The ICar interface
+[uuid(710D2F54-9289-4f66-9F64-201D56FB66C7), object]			// Interface ID (IID).
+interface ICar : IUnknown
+{
+	HRESULT SpeedUp([in] long delta);
+	HRESULT CurrentSpeed([out, retval] long* currSp);
+};
+
+// The IRadio interface
+[uuid(3B6C6126-92A8-47ef-86DA-A12BFFD9BC42), object]			// Interface ID (IID).
+interface IRadio : IUnknown
+{
+	HRESULT CrankTunes();
+};
+
+// The IScriptableCar interface
+[uuid(DBAA0495-2F6A-458a-A74A-129F2C45B642), dual, object]			// Interface ID (IID).
+interface IScriptableCar : IDispatch
+{
+	[id(1), propput] HRESULT Speed([in] long currSp);
+	[id(1), propget] HRESULT Speed([out, retval] long* currSp);
+	[id(2)] HRESULT CrankTunes();
+};
+
+// The Raw Car Library.
+[uuid(D679F136-19C9-4868-B229-F338AE163656), // Library ID (LIBID)
+version(1.0),
+custom(0F21F359-AB84-41e8-9A78-36D110E6D2F9, "Intertech.RawComCarLib")]
+library RawComCarLib
+{
+	// This is only for illustration.
+	/*
+	[uuid(0899D87E-80FE-4e9e-A831-6FCF0A149A9B)]
+	dispinterface _CarDispinterface
+	{
+		properties:
+		methods:
+		[id(1)] HRESULT PopTheTrunk(VARIANT_BOOL popIt);
+	};
+
+	[uuid(1A57D988-6A5F-4ef6-B991-7D64C51003A0)]
+	coclass LateBoundOnlyCar
+	{
+		[default] dispinterface _CarDispinterface;
+	};
+	*/
+
+	importlib("stdole32.tlb");
+
+	// Our COM class.
+	[uuid(096AC71D-3EB6-4974-A071-A3B1C0B7FC8D)]				// Class ID (CLSID)
+	coclass ComCar
+	{
+		[default] interface ICar;
+		interface IRadio;
+	};
+
+	// Our other COM class.
+	[uuid(7AD9AFC9-771C-495c-A330-006D54A23650)]				// Class ID (CLSID)
+	coclass ScriptableCar
+	{
+		[default] interface IScriptableCar;
+	};
+};
