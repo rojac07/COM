@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfiguredCarObjects", "ConfiguredCarObjects.csproj", "{24A7D902-767E-489A-954A-855599B70138}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{24A7D902-767E-489A-954A-855599B70138}.Debug.ActiveCfg = Debug|.NET
+		{24A7D902-767E-489A-954A-855599B70138}.Debug.Build.0 = Debug|.NET
+		{24A7D902-767E-489A-954A-855599B70138}.Release.ActiveCfg = Release|.NET
+		{24A7D902-767E-489A-954A-855599B70138}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

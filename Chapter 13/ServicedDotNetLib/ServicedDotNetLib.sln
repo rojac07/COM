@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicedDotNetLib", "ServicedDotNetLib.csproj", "{FF3788D2-D2E2-4ABA-A715-A53E4E035E20}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{FF3788D2-D2E2-4ABA-A715-A53E4E035E20}.Debug.ActiveCfg = Debug|.NET
+		{FF3788D2-D2E2-4ABA-A715-A53E4E035E20}.Debug.Build.0 = Debug|.NET
+		{FF3788D2-D2E2-4ABA-A715-A53E4E035E20}.Release.ActiveCfg = Release|.NET
+		{FF3788D2-D2E2-4ABA-A715-A53E4E035E20}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,37 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\WINDOWS\System32\stdole2.tlb#OLE Automation
+Reference=*\G{7B69AEB6-F0B7-46BB-8AD4-1CACD1EA5AE9}#1.0#0#..\AnotherAtlCarServer\Debug\AnotherAtlCarServer.dll#AnotherAtlCarServer 1.0 Type Library
+Reference=*\G{E6660B3A-297E-34DD-84AA-7F68E4F6E402}#1.0#0#..\BinaryCompatibleDotNetTypeServer\bin\Debug\binarycompatibledotnettypeserver.tlb#BinaryCompatibleDotNetTypeServer
+Reference=*\G{6C1DB6DD-2F65-4C50-B3AD-401AD7446A00}#1.0#0#..\BinaryCompatibleVbNetTypeServer\bin\binarycompatiblevbnettypeserver.tlb#BinaryCompatibleVbNetTypeServer
+Reference=*\G{77FDAF7F-8D51-335D-B6B3-8AFB1B224743}#1.0#0#..\ManagedComDefs\bin\Debug\managedcomdefs.tlb#ManagedComDefs
+Form=Form1.frm
+Startup="Form1"
+ExeName32="Project1.exe"
+Command32=""
+Name="Project1"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="Home"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+
+[MS Transaction Server]
+AutoRefresh=1

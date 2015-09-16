@@ -1,0 +1,26 @@
+HKCR
+{
+	AtlHelpCustomAttsServer.AtlAdder.1 = s 'AtlAdder Class'
+	{
+		CLSID = s '{4C3DB474-61BF-49BF-979B-68A5FB53E43B}'
+	}
+	AtlHelpCustomAttsServer.AtlAdder = s 'AtlAdder Class'
+	{
+		CLSID = s '{4C3DB474-61BF-49BF-979B-68A5FB53E43B}'
+		CurVer = s 'AtlHelpCustomAttsServer.AtlAdder.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4C3DB474-61BF-49BF-979B-68A5FB53E43B} = s 'AtlAdder Class'
+		{
+			ProgID = s 'AtlHelpCustomAttsServer.AtlAdder.1'
+			VersionIndependentProgID = s 'AtlHelpCustomAttsServer.AtlAdder'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{85CE5F31-AAD7-4C43-93F4-12841414C822}'
+		}
+	}
+}

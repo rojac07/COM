@@ -1,0 +1,40 @@
+// AtlComErrorServer.idl : IDL source for AtlComErrorServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AtlComErrorServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(D52B3F7A-1D2A-48F7-B839-397090A7656A),
+		dual,
+		helpstring("ITheBrokenObject Interface"),
+		pointer_default(unique)
+	]
+	interface ITheBrokenObject : IDispatch
+	{
+		[id(1), helpstring("method ReturnFailedHRESULT")] HRESULT ReturnFailedHRESULT();
+		[id(2), helpstring("method ReturnComErrorObject")] HRESULT ReturnComErrorObject();
+	};
+
+[
+	uuid(6521B1E3-E42A-4B83-9298-75E8B0795AB3),
+	version(1.0),
+	helpstring("AtlComErrorServer 1.0 Type Library")
+]
+library ATLCOMERRORSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(DD7A12D1-7662-4F77-9776-FC00B1AA45AF),
+		helpstring("TheBrokenObject Class")
+	]
+	coclass TheBrokenObject
+	{
+		[default] interface ITheBrokenObject;
+	};
+};

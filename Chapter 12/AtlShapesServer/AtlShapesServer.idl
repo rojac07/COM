@@ -1,0 +1,49 @@
+// AtlShapesServer.idl : IDL source for AtlShapesServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AtlShapesServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+	typedef enum SHAPECOLOR
+	{
+		RED, PINK, RUST
+	}SHAPECOLOR;
+
+	[
+		object,
+		uuid(B1691C03-7EA8-4DAB-86CC-7D6CD859671A),
+		dual,
+		helpstring("IDrawable Interface"),
+		pointer_default(unique)
+	]
+	interface IDrawable : IDispatch
+	{
+		[id(1), helpstring("method Draw")] 
+		HRESULT Draw([in] int top, [in] int left, [in] int bottom, [in] int right);
+		
+		[id(2), helpstring("method SetColor")] 
+		HRESULT SetColor([in] SHAPECOLOR c);
+	};
+
+[
+	uuid(95FBF6E3-1B03-4904-A5D3-C77A02785F9A),
+	version(1.0),
+	helpstring("AtlShapesServer 1.0 Type Library")
+]
+library ATLSHAPESSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(204F9A4B-4D22-451B-BE2F-338F2917E7F5),
+		helpstring("CoHexagon Class")
+	]
+	coclass CoHexagon
+	{
+		[default] interface IDrawable;
+	};
+};

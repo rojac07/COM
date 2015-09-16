@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarObjectsClient", "CarObjectsClient.csproj", "{81DB3AA5-E35F-4868-A23F-80054E2CCAC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{81DB3AA5-E35F-4868-A23F-80054E2CCAC2}.Debug.ActiveCfg = Debug|.NET
+		{81DB3AA5-E35F-4868-A23F-80054E2CCAC2}.Debug.Build.0 = Debug|.NET
+		{81DB3AA5-E35F-4868-A23F-80054E2CCAC2}.Release.ActiveCfg = Release|.NET
+		{81DB3AA5-E35F-4868-A23F-80054E2CCAC2}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,89 @@
+// AtlCarServer.idl : IDL source for AtlCarServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AtlCarServer.tlb) and marshalling code.
+
+
+/****** NOTE ****** 
+The use of the IJet and JetPlane types
+will be seen in chapter 6.  Ignore
+until then...
+*******************/
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+typedef enum RADIOTYPE
+{
+	EIGHT_TRACK,
+	CD,
+	AM_RADIO,
+	FM_RADIO
+} RADIOTYPE;
+
+	[
+		object,
+		uuid(B836F694-809C-4F12-A423-BBE031B1BB2A),
+		oleautomation,
+		helpstring("IComCar Interface"),
+		pointer_default(unique)
+	]
+	interface IComCar : IUnknown
+	{
+		[helpstring("method SpeedUp")] HRESULT SpeedUp([in] long delta);
+		[helpstring("method TurnOnRadio")] HRESULT TurnOnRadio([in] RADIOTYPE make);
+	};
+	
+	[
+		object,
+		uuid(E98B898C-5C0A-4318-AFCB-541695E4945D),
+		oleautomation,
+		helpstring("IComCar Interface"),
+		pointer_default(unique)
+	]
+	interface ITurbo: IUnknown
+	{
+		[helpstring("method TurboBlast")] HRESULT TurboBlast();
+	};
+	[
+		object,
+		uuid(011BF6AC-3C5D-420E-A1B6-2221FE6C8FC5),
+		oleautomation,
+		helpstring("IJet Interface"),
+		pointer_default(unique)
+	]
+	interface IJet : IUnknown
+	{
+		[helpstring("method TakeOff")] HRESULT TakeOff();
+	};
+
+[
+	uuid(2EE867E1-C237-48FC-B6C7-D2804FB52C68),
+	version(1.0),
+	helpstring("AtlCarServer 1.0 Type Library")
+]
+library ATLCARSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(3C4F2B7A-F23E-47A7-ACF0-224DDDAD1D83),
+		helpstring("ComCar Class")
+	]
+	coclass ComCar
+	{
+		[default] interface IComCar;
+		interface ITurbo;
+	};
+	[
+		uuid(F37C6BDC-F790-45A9-91CA-1A3DCDAC7C42),
+		helpstring("JetPlane Class")
+	]
+	coclass JetPlane
+	{
+		[default] interface IJet;
+		interface ITurbo;
+	};
+};

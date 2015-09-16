@@ -1,0 +1,25 @@
+HKCR
+{
+	WidgetServer.Drawer.1 = s 'Drawer Class'
+	{
+		CLSID = s '{5F90D0BE-552A-4073-A55A-490B7AF7C3CF}'
+	}
+	WidgetServer.Drawer = s 'Drawer Class'
+	{
+		CLSID = s '{5F90D0BE-552A-4073-A55A-490B7AF7C3CF}'
+		CurVer = s 'WidgetServer.Drawer.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5F90D0BE-552A-4073-A55A-490B7AF7C3CF} = s 'Drawer Class'
+		{
+			ProgID = s 'WidgetServer.Drawer.1'
+			VersionIndependentProgID = s 'WidgetServer.Drawer'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{36206221-415B-4EC4-A6BF-0F446C7E0945}'
+		}
+	}
+}

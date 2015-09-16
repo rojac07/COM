@@ -1,0 +1,16 @@
+<HTML>
+<HEAD>
+<TITLE>HTML code making use of .NET!</TITLE>
+</HEAD>
+<BODY>
+
+<!-- A bit of late binding -->
+<SCRIPT language = VBScript>
+dim calcObj
+Set calcObj = CreateObject("DotNetMathServer.DotNetCalc")
+MsgBox calcObj.Add(10, 10)
+MsgBox calcObj.Subtract(50, 900)
+MsgBox calcObj.Add_2(20.3, 44.9)
+</Script>
+</BODY>
+</HTML>

@@ -1,0 +1,25 @@
+HKCR
+{
+	WidgetServer.CoWidget.1 = s 'CoWidget Class'
+	{
+		CLSID = s '{9B74660B-7133-4B0F-B361-37CAF9511274}'
+	}
+	WidgetServer.CoWidget = s 'CoWidget Class'
+	{
+		CLSID = s '{9B74660B-7133-4B0F-B361-37CAF9511274}'
+		CurVer = s 'WidgetServer.CoWidget.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9B74660B-7133-4B0F-B361-37CAF9511274} = s 'CoWidget Class'
+		{
+			ProgID = s 'WidgetServer.CoWidget.1'
+			VersionIndependentProgID = s 'WidgetServer.CoWidget'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{36206221-415B-4EC4-A6BF-0F446C7E0945}'
+		}
+	}
+}

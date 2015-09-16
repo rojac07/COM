@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LateBinder", "LateBinder.csproj", "{FC8F6915-5EE0-424B-BCAB-BA72BED3CBAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{FC8F6915-5EE0-424B-BCAB-BA72BED3CBAE}.Debug.ActiveCfg = Debug|.NET
+		{FC8F6915-5EE0-424B-BCAB-BA72BED3CBAE}.Debug.Build.0 = Debug|.NET
+		{FC8F6915-5EE0-424B-BCAB-BA72BED3CBAE}.Release.ActiveCfg = Release|.NET
+		{FC8F6915-5EE0-424B-BCAB-BA72BED3CBAE}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

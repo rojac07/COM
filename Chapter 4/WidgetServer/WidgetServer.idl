@@ -1,0 +1,119 @@
+// WidgetServer.idl : IDL source for WidgetServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (WidgetServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+	// IDL structures may take the [uuid] attribute, 
+	// especially if the structure is to be stuffed into a VARIANT
+	// or SAFEARRAY.
+	[uuid(FB58A440-ABD8-43a3-969D-0B7D8700664A)]
+	typedef struct 
+	{
+		long xPos;
+		long yPos;
+	}MYPOINT;
+
+	[
+		object,
+		uuid(F11657E4-8C9E-40EB-8AFD-312BBD9D606C),
+	
+		helpstring("IParams Interface"),
+		pointer_default(unique)
+	]
+	interface IParams : IUnknown
+	{
+		[helpstring("This method only takes [in] params")] 
+		HRESULT InParamsOnly([in] long x, [in] long y);
+
+		[helpstring("This method only takes [out] params")] 
+		HRESULT OutParamsOnly([out] long* x, [out] long* y);
+			
+		[helpstring("Takes two [in, out] params.")] 
+		HRESULT InAndOutParams([in, out] long* x, [in, out] long* y);
+
+		[helpstring("method SumByRetVal")] 
+		HRESULT SumByRetVal([in] long x, [in] long y, 
+                            [out, retval] long* answer);	
+
+	};
+
+
+	[
+		object,
+		uuid(DB6803AC-F6E9-426c-ADCA-395B10EB5229),
+	
+		helpstring("ISafeArray Interface"),
+		pointer_default(unique)
+	]
+	interface ISafeArray : IUnknown
+	{
+		[helpstring("Pass in a SafeArray of Strings.")] 
+		HRESULT UseThisSafeArray([in] SAFEARRAY(BSTR)* ppStrings);
+
+		[helpstring("Return a SafeArray of Strings.")] 
+		HRESULT GiveMeSomeStrings([out, retval] SAFEARRAY(BSTR)* ppStrings);
+	};
+	[
+		object,
+		uuid(734CA6D8-8F66-4DDC-BB25-34875B1FBC07),
+	
+		helpstring("IGlobalObject Interface"),
+		pointer_default(unique)
+	]
+	interface IGlobalObject : IUnknown
+	{
+		[helpstring("method SomeMethod")] HRESULT SomeMethod();
+	};
+	[
+		object,
+		uuid(3CBEA169-BBE9-4A28-B5AA-2E7C5594507E),
+	
+		helpstring("IDraw Interface"),
+		pointer_default(unique)
+	]
+	interface IDraw : IUnknown
+	{
+		[helpstring("method DrawALine")] HRESULT DrawALine([in, out] MYPOINT* p1, [in, out] MYPOINT* p2);
+	};
+
+
+[
+	uuid(36206221-415B-4EC4-A6BF-0F446C7E0945),
+	version(1.0),
+	helpstring("WidgetServer 1.0 Type Library")
+]
+library WIDGETSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(9B74660B-7133-4B0F-B361-37CAF9511274),
+		helpstring("CoWidget Class")
+	]
+	coclass CoWidget
+	{
+		[default] interface IParams;
+		interface ISafeArray;
+	};
+	[
+		uuid(138B91B9-C70A-49C3-9768-C5202B50E708),
+		helpstring("GlobalObject Class"), appobject
+	]
+	coclass GlobalObject
+	{
+		[default] interface IGlobalObject;
+	};
+	[
+		uuid(5F90D0BE-552A-4073-A55A-490B7AF7C3CF),
+		helpstring("Drawer Class")
+	]
+	coclass Drawer
+	{
+		[default] interface IDraw;
+	};
+};

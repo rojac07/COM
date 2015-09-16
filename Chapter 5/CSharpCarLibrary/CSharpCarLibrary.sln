@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpCarLibrary", "CSharpCarLibrary.csproj", "{979D5844-D3B7-4055-8FD4-76864A48D641}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{979D5844-D3B7-4055-8FD4-76864A48D641}.Debug.ActiveCfg = Debug|.NET
+		{979D5844-D3B7-4055-8FD4-76864A48D641}.Debug.Build.0 = Debug|.NET
+		{979D5844-D3B7-4055-8FD4-76864A48D641}.Release.ActiveCfg = Release|.NET
+		{979D5844-D3B7-4055-8FD4-76864A48D641}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

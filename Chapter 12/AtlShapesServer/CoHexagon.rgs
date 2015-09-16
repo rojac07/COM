@@ -1,0 +1,26 @@
+HKCR
+{
+	AtlShapesServer.CoHexagon.1 = s 'CoHexagon Class'
+	{
+		CLSID = s '{204F9A4B-4D22-451B-BE2F-338F2917E7F5}'
+	}
+	AtlShapesServer.CoHexagon = s 'CoHexagon Class'
+	{
+		CLSID = s '{204F9A4B-4D22-451B-BE2F-338F2917E7F5}'
+		CurVer = s 'AtlShapesServer.CoHexagon.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {204F9A4B-4D22-451B-BE2F-338F2917E7F5} = s 'CoHexagon Class'
+		{
+			ProgID = s 'AtlShapesServer.CoHexagon.1'
+			VersionIndependentProgID = s 'AtlShapesServer.CoHexagon'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{95FBF6E3-1B03-4904-A5D3-C77A02785F9A}'
+		}
+	}
+}

@@ -1,0 +1,42 @@
+// AtlHelpCustomAttsServer.idl : IDL source for AtlHelpCustomAttsServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AtlHelpCustomAttsServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(EC7C1641-4031-45EA-8B61-7AAAD04A0BA7),
+		dual,
+		helpstring("IAdd Interface"),
+		pointer_default(unique)
+	]
+	interface IAdd : IDispatch
+	{
+		[id(1)] 
+		HRESULT Add([in] int x, [in] int y, [out, retval] int* answer);
+	};
+
+[
+	uuid(85CE5F31-AAD7-4C43-93F4-12841414C822),
+	version(1.0),
+	helpstring("AtlHelpCustomAttsServer 1.0 Type Library")
+]
+library ATLHELPCUSTOMATTSSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(4C3DB474-61BF-49BF-979B-68A5FB53E43B),
+		helpstring("This class adds two numbers"),
+		custom(1403B3A5-38FE-4ba9-94E2-54577F712E7A, 
+		"ToDo: Add subtraction functionality...")
+	]
+	coclass AtlAdder
+	{
+		[default] interface IAdd;
+	};
+};

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpOptParamClient", "CSharpOptParamClient.csproj", "{305E42D1-A47C-40B9-A078-5B54E3873248}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{305E42D1-A47C-40B9-A078-5B54E3873248}.Debug.ActiveCfg = Debug|.NET
+		{305E42D1-A47C-40B9-A078-5B54E3873248}.Debug.Build.0 = Debug|.NET
+		{305E42D1-A47C-40B9-A078-5B54E3873248}.Release.ActiveCfg = Release|.NET
+		{305E42D1-A47C-40B9-A078-5B54E3873248}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

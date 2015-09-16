@@ -1,0 +1,25 @@
+HKCR
+{
+	AtlCarServer.JetPlane.1 = s 'JetPlane Class'
+	{
+		CLSID = s '{F37C6BDC-F790-45A9-91CA-1A3DCDAC7C42}'
+	}
+	AtlCarServer.JetPlane = s 'JetPlane Class'
+	{
+		CLSID = s '{F37C6BDC-F790-45A9-91CA-1A3DCDAC7C42}'
+		CurVer = s 'AtlCarServer.JetPlane.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {F37C6BDC-F790-45A9-91CA-1A3DCDAC7C42} = s 'JetPlane Class'
+		{
+			ProgID = s 'AtlCarServer.JetPlane.1'
+			VersionIndependentProgID = s 'AtlCarServer.JetPlane'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{2EE867E1-C237-48FC-B6C7-D2804FB52C68}'
+		}
+	}
+}

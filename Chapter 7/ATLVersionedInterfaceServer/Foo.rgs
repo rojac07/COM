@@ -1,0 +1,25 @@
+HKCR
+{
+	ATLVersionedInterfaceServer.Foo.1 = s 'Foo Class'
+	{
+		CLSID = s '{67BF3E05-E310-46CC-B16D-A34474EA1B01}'
+	}
+	ATLVersionedInterfaceServer.Foo = s 'Foo Class'
+	{
+		CLSID = s '{67BF3E05-E310-46CC-B16D-A34474EA1B01}'
+		CurVer = s 'ATLVersionedInterfaceServer.Foo.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {67BF3E05-E310-46CC-B16D-A34474EA1B01} = s 'Foo Class'
+		{
+			ProgID = s 'ATLVersionedInterfaceServer.Foo.1'
+			VersionIndependentProgID = s 'ATLVersionedInterfaceServer.Foo'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{E89EAD7D-C42A-4B0C-AFEA-7F1D0BBAE673}'
+		}
+	}
+}

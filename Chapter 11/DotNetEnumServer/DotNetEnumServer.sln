@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetEnumServer", "DotNetEnumServer.csproj", "{ED3BF39A-5E16-44A2-9AF6-3D08461BF7CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{ED3BF39A-5E16-44A2-9AF6-3D08461BF7CF}.Debug.ActiveCfg = Debug|.NET
+		{ED3BF39A-5E16-44A2-9AF6-3D08461BF7CF}.Debug.Build.0 = Debug|.NET
+		{ED3BF39A-5E16-44A2-9AF6-3D08461BF7CF}.Release.ActiveCfg = Release|.NET
+		{ED3BF39A-5E16-44A2-9AF6-3D08461BF7CF}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+HKCR
+{
+	CustomIDLServer.Foo.1 = s 'Foo Class'
+	{
+		CLSID = s '{EA0AF1B1-5EA7-4352-AF6D-E78606614CCA}'
+	}
+	CustomIDLServer.Foo = s 'Foo Class'
+	{
+		CLSID = s '{EA0AF1B1-5EA7-4352-AF6D-E78606614CCA}'
+		CurVer = s 'CustomIDLServer.Foo.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {EA0AF1B1-5EA7-4352-AF6D-E78606614CCA} = s 'Foo Class'
+		{
+			ProgID = s 'CustomIDLServer.Foo.1'
+			VersionIndependentProgID = s 'CustomIDLServer.Foo'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{365739ED-EE97-4F7C-A050-BC157F04663A}'
+		}
+	}
+}

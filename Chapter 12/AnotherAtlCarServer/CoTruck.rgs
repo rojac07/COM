@@ -1,0 +1,26 @@
+HKCR
+{
+	AnotherAtlCarServer.CoTruck.1 = s 'CoTruck Class'
+	{
+		CLSID = s '{862C5338-8AD7-43A3-A9A7-F21B145D61D0}'
+	}
+	AnotherAtlCarServer.CoTruck = s 'CoTruck Class'
+	{
+		CLSID = s '{862C5338-8AD7-43A3-A9A7-F21B145D61D0}'
+		CurVer = s 'AnotherAtlCarServer.CoTruck.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {862C5338-8AD7-43A3-A9A7-F21B145D61D0} = s 'CoTruck Class'
+		{
+			ProgID = s 'AnotherAtlCarServer.CoTruck.1'
+			VersionIndependentProgID = s 'AnotherAtlCarServer.CoTruck'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{7B69AEB6-F0B7-46BB-8AD4-1CACD1EA5AE9}'
+		}
+	}
+}

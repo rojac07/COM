@@ -1,0 +1,42 @@
+// CustomIDLServer.idl : IDL source for CustomIDLServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CustomIDLServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+	[
+		object,
+		uuid(267943B0-50E4-400C-8F79-4B68D4A839FA),
+		custom(1403B3A5-38FE-4ba9-94E2-54577F712E7A, "ToDo:  Implement methods..."),
+		helpstring("IFoo Interface"),
+		pointer_default(unique)
+	]
+	interface IFoo : IUnknown
+	{
+		[helpstring("method MethodA")] HRESULT MethodA();
+	};
+
+[
+	uuid(365739ED-EE97-4F7C-A050-BC157F04663A),
+	version(1.0),
+	helpstring("CustomIDLServer 1.0 Type Library"), 
+	custom(FF69F249-3FC0-4062-9CB6-7901E4DD3B7A, "Updated: 3/24/01")
+]
+library CUSTOMIDLSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(EA0AF1B1-5EA7-4352-AF6D-E78606614CCA),
+		helpstring("Foo Class"), 
+		custom(97240DA1-C8DD-4548-95B7-DFBEF217C026, "ProgID: CustomIDLServer.Foo")
+	]
+	coclass Foo
+	{
+		[default] interface IFoo;
+	};
+};

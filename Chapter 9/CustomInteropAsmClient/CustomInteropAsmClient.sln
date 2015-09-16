@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInteropAsmClient", "CustomInteropAsmClient.csproj", "{823986D8-A539-415F-B398-6E20ED9927DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{823986D8-A539-415F-B398-6E20ED9927DD}.Debug.ActiveCfg = Debug|.NET
+		{823986D8-A539-415F-B398-6E20ED9927DD}.Debug.Build.0 = Debug|.NET
+		{823986D8-A539-415F-B398-6E20ED9927DD}.Release.ActiveCfg = Release|.NET
+		{823986D8-A539-415F-B398-6E20ED9927DD}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

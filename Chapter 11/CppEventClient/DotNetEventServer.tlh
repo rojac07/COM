@@ -1,0 +1,245 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8447.0 (c03702e3).
+//
+// DotNetEventServer.tlh
+//
+// C++ source equivalent of Win32 type library C:\Apress Books\InteropBook\Labs\Chapter 11\DotNetEventServer\bin\Debug\DotNetEventServer.tlb
+// compiler-generated file created 02/09/02 at 17:22:08 - DO NOT EDIT!
+
+//
+// Cross-referenced type libraries:
+//
+//  #import "C:\WINDOWS\Microsoft.NET\Framework\v1.0.3617\mscorlib.tlb"
+//
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("3289316f-0b19-44f1-b33b-8673d6faf057"))
+/* dispinterface */ _DEventInterface;
+struct /* coclass */ DotNetEventSender;
+struct __declspec(uuid("febb2e08-7f6d-415d-ad90-b8c4c03a7b4b"))
+/* dispinterface */ _DEventInterfaceOne;
+struct __declspec(uuid("5941d9a2-1149-4daf-88ea-eb5b04b9b85b"))
+/* dispinterface */ _DEventInterfaceTwo;
+struct __declspec(uuid("333e8c06-04ac-4677-8ae2-3aaef2e046dc"))
+/* dispinterface */ _DEventInterfaceThree;
+struct /* coclass */ DotNetMultiEventSourceClass;
+struct __declspec(uuid("1c150c56-4e80-3a20-b0c9-e2b23392d60d"))
+/* dual interface */ _DotNetEventSender;
+struct __declspec(uuid("c324c9d3-8f1a-3f0f-8281-d73dfab25eb3"))
+/* dual interface */ _DotNetMultiEventSourceClass;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_DEventInterface, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_DEventInterfaceOne, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_DEventInterfaceTwo, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_DEventInterfaceThree, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_DotNetEventSender, __uuidof(_DotNetEventSender));
+_COM_SMARTPTR_TYPEDEF(_DotNetMultiEventSourceClass, __uuidof(_DotNetMultiEventSourceClass));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("3289316f-0b19-44f1-b33b-8673d6faf057"))
+_DEventInterface : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT TheEvent (
+        _bstr_t msg );
+};
+
+struct __declspec(uuid("24f279cb-d9ba-4ca4-95cd-2f2338443088"))
+DotNetEventSender;
+    // [ default ] interface _DotNetEventSender
+    // interface _Object
+    // [ default, source ] dispinterface _DEventInterface
+
+struct __declspec(uuid("febb2e08-7f6d-415d-ad90-b8c4c03a7b4b"))
+_DEventInterfaceOne : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT EventA ( );
+};
+
+struct __declspec(uuid("5941d9a2-1149-4daf-88ea-eb5b04b9b85b"))
+_DEventInterfaceTwo : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT EventB ( );
+};
+
+struct __declspec(uuid("333e8c06-04ac-4677-8ae2-3aaef2e046dc"))
+_DEventInterfaceThree : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT EventC ( );
+};
+
+struct __declspec(uuid("58e48229-9fff-42fb-b987-8096b27b6b19"))
+DotNetMultiEventSourceClass;
+    // [ default ] interface _DotNetMultiEventSourceClass
+    // interface _Object
+    // [ default, source ] dispinterface _DEventInterfaceOne
+    // [ source ] dispinterface _DEventInterfaceTwo
+    // [ source ] dispinterface _DEventInterfaceThree
+
+struct __declspec(uuid("1c150c56-4e80-3a20-b0c9-e2b23392d60d"))
+_DotNetEventSender : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetToString))
+    _bstr_t ToString;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetToString ( );
+    VARIANT_BOOL Equals (
+        const _variant_t & obj );
+    long GetHashCode ( );
+    _TypePtr GetType ( );
+    HRESULT add_TheEvent (
+        IUnknown * value );
+    HRESULT remove_TheEvent (
+        IUnknown * value );
+    HRESULT FireTheEvent ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_ToString (
+        BSTR * pRetVal ) = 0;
+    virtual HRESULT __stdcall raw_Equals (
+        VARIANT obj,
+        VARIANT_BOOL * pRetVal ) = 0;
+    virtual HRESULT __stdcall raw_GetHashCode (
+        long * pRetVal ) = 0;
+    virtual HRESULT __stdcall raw_GetType (
+        struct _Type * * pRetVal ) = 0;
+    virtual HRESULT __stdcall raw_add_TheEvent (
+        IUnknown * value ) = 0;
+    virtual HRESULT __stdcall raw_remove_TheEvent (
+        IUnknown * value ) = 0;
+    virtual HRESULT __stdcall raw_FireTheEvent ( ) = 0;
+};
+
+struct __declspec(uuid("c324c9d3-8f1a-3f0f-8281-d73dfab25eb3"))
+_DotNetMultiEventSourceClass : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetToString))
+    _bstr_t ToString;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetToString ( );
+    VARIANT_BOOL Equals (
+        const _variant_t & obj );
+    long GetHashCode ( );
+    _TypePtr GetType ( );
+    HRESULT add_EventA (
+        IUnknown * value );
+    HRESULT remove_EventA (
+        IUnknown * value );
+    HRESULT add_EventB (
+        IUnknown * value );
+    HRESULT remove_EventB (
+        IUnknown * value );
+    HRESULT add_EventC (
+        IUnknown * value );
+    HRESULT remove_EventC (
+        IUnknown * value );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_ToString (
+        BSTR * pRetVal ) = 0;
+    virtual HRESULT __stdcall raw_Equals (
+        VARIANT obj,
+        VARIANT_BOOL * pRetVal ) = 0;
+    virtual HRESULT __stdcall raw_GetHashCode (
+        long * pRetVal ) = 0;
+    virtual HRESULT __stdcall raw_GetType (
+        struct _Type * * pRetVal ) = 0;
+    virtual HRESULT __stdcall raw_add_EventA (
+        IUnknown * value ) = 0;
+    virtual HRESULT __stdcall raw_remove_EventA (
+        IUnknown * value ) = 0;
+    virtual HRESULT __stdcall raw_add_EventB (
+        IUnknown * value ) = 0;
+    virtual HRESULT __stdcall raw_remove_EventB (
+        IUnknown * value ) = 0;
+    virtual HRESULT __stdcall raw_add_EventC (
+        IUnknown * value ) = 0;
+    virtual HRESULT __stdcall raw_remove_EventC (
+        IUnknown * value ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_DotNetEventServer =
+    {0xa3920334,0x6d12,0x30ff,{0x9e,0x93,0x53,0x3d,0x3c,0xd0,0xf5,0x18}};
+extern "C" const GUID __declspec(selectany) DIID__DEventInterface =
+    {0x3289316f,0x0b19,0x44f1,{0xb3,0x3b,0x86,0x73,0xd6,0xfa,0xf0,0x57}};
+extern "C" const GUID __declspec(selectany) CLSID_DotNetEventSender =
+    {0x24f279cb,0xd9ba,0x4ca4,{0x95,0xcd,0x2f,0x23,0x38,0x44,0x30,0x88}};
+extern "C" const GUID __declspec(selectany) DIID__DEventInterfaceOne =
+    {0xfebb2e08,0x7f6d,0x415d,{0xad,0x90,0xb8,0xc4,0xc0,0x3a,0x7b,0x4b}};
+extern "C" const GUID __declspec(selectany) DIID__DEventInterfaceTwo =
+    {0x5941d9a2,0x1149,0x4daf,{0x88,0xea,0xeb,0x5b,0x04,0xb9,0xb8,0x5b}};
+extern "C" const GUID __declspec(selectany) DIID__DEventInterfaceThree =
+    {0x333e8c06,0x04ac,0x4677,{0x8a,0xe2,0x3a,0xae,0xf2,0xe0,0x46,0xdc}};
+extern "C" const GUID __declspec(selectany) CLSID_DotNetMultiEventSourceClass =
+    {0x58e48229,0x9fff,0x42fb,{0xb9,0x87,0x80,0x96,0xb2,0x7b,0x6b,0x19}};
+extern "C" const GUID __declspec(selectany) IID__DotNetEventSender =
+    {0x1c150c56,0x4e80,0x3a20,{0xb0,0xc9,0xe2,0xb2,0x33,0x92,0xd6,0x0d}};
+extern "C" const GUID __declspec(selectany) IID__DotNetMultiEventSourceClass =
+    {0xc324c9d3,0x8f1a,0x3f0f,{0x82,0x81,0xd7,0x3d,0xfa,0xb2,0x5e,0xb3}};
+
+//
+// Wrapper method implementations
+//
+
+#include "DotNetEventServer.tli"
+
+#pragma pack(pop)

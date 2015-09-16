@@ -1,0 +1,25 @@
+HKCR
+{
+	WidgetServer.GlobalObject.1 = s 'GlobalObject Class'
+	{
+		CLSID = s '{138B91B9-C70A-49C3-9768-C5202B50E708}'
+	}
+	WidgetServer.GlobalObject = s 'GlobalObject Class'
+	{
+		CLSID = s '{138B91B9-C70A-49C3-9768-C5202B50E708}'
+		CurVer = s 'WidgetServer.GlobalObject.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {138B91B9-C70A-49C3-9768-C5202B50E708} = s 'GlobalObject Class'
+		{
+			ProgID = s 'WidgetServer.GlobalObject.1'
+			VersionIndependentProgID = s 'WidgetServer.GlobalObject'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{36206221-415B-4EC4-A6BF-0F446C7E0945}'
+		}
+	}
+}

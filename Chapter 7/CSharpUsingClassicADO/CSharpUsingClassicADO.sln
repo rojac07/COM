@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpUsingClassicADO", "CSharpUsingClassicADO.csproj", "{7C4183A8-5606-49B8-B5E7-DD4FA713E6CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7C4183A8-5606-49B8-B5E7-DD4FA713E6CF}.Debug.ActiveCfg = Debug|.NET
+		{7C4183A8-5606-49B8-B5E7-DD4FA713E6CF}.Debug.Build.0 = Debug|.NET
+		{7C4183A8-5606-49B8-B5E7-DD4FA713E6CF}.Release.ActiveCfg = Release|.NET
+		{7C4183A8-5606-49B8-B5E7-DD4FA713E6CF}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

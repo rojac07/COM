@@ -1,0 +1,62 @@
+// ATLVersionedInterfaceServer.idl : IDL source for ATLVersionedInterfaceServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ATLVersionedInterfaceServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(402464FE-F5B1-4859-865F-18AC88A5D198),
+		oleautomation,
+		helpstring("IFoo Interface"),
+		pointer_default(unique)
+	]
+	interface IFoo : IUnknown
+	{
+		[helpstring("method A")] HRESULT A();
+	};
+	[
+		object,
+		uuid(1646992B-B7DF-429b-A89A-D196DCD82BF3),
+		oleautomation,
+		helpstring("IFoo2 Interface"),
+		pointer_default(unique)
+	]
+	interface IFoo2 : IFoo
+	{
+		[helpstring("method B")] HRESULT B();
+	};
+	[
+		object,
+		uuid(9FD7DBEC-497D-44cc-9E44-218AC3948328),
+		oleautomation,
+		helpstring("IFoo Interface"),
+		pointer_default(unique)
+	]
+	interface IFoo3 : IFoo2
+	{
+		[helpstring("method C")] HRESULT C();
+	};
+[
+	uuid(E89EAD7D-C42A-4B0C-AFEA-7F1D0BBAE673),
+	version(1.0),
+	helpstring("ATLVersionedInterfaceServer 1.0 Type Library")
+]
+library ATLVERSIONEDINTERFACESERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(67BF3E05-E310-46CC-B16D-A34474EA1B01),
+		helpstring("Foo Class")
+	]
+	coclass Foo
+	{
+		[default] interface IFoo;
+		interface IFoo2;
+		interface IFoo3;
+	};
+};

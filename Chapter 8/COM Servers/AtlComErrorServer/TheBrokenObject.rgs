@@ -1,0 +1,26 @@
+HKCR
+{
+	AtlComErrorServer.TheBrokenObject.1 = s 'TheBrokenObject Class'
+	{
+		CLSID = s '{DD7A12D1-7662-4F77-9776-FC00B1AA45AF}'
+	}
+	AtlComErrorServer.TheBrokenObject = s 'TheBrokenObject Class'
+	{
+		CLSID = s '{DD7A12D1-7662-4F77-9776-FC00B1AA45AF}'
+		CurVer = s 'AtlComErrorServer.TheBrokenObject.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {DD7A12D1-7662-4F77-9776-FC00B1AA45AF} = s 'TheBrokenObject Class'
+		{
+			ProgID = s 'AtlComErrorServer.TheBrokenObject.1'
+			VersionIndependentProgID = s 'AtlComErrorServer.TheBrokenObject'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{6521B1E3-E42A-4B83-9298-75E8B0795AB3}'
+		}
+	}
+}
