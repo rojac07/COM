@@ -70,6 +70,9 @@ Option Explicit
 ' The cars.
  Private vbCar As Vb6CarServer.CoCar
  Private atlCar As ATLCARSERVERLib.ComCar
+ Private atlBoat As ATLCARSERVERLib.comBoat
+ 
+ 
 
 Private Sub btnATLCoCar_Click()
     ' Speed up car and crank some tunes.
@@ -98,17 +101,23 @@ End Sub
 
 Private Sub Command1_Click()
   
- 
+  atlBoat.Swimming
+  
  
 End Sub
 
 Private Sub Form_Load()
     Set vbCar = New Vb6CarServer.CoCar
     Set atlCar = New ATLCARSERVERLib.ComCar
+    
+    Set atlBoat = New ATLCARSERVERLib.comBoat
+    
 End Sub
 
 Private Sub Form_Unload(Cancel As Integer)
     ' Explicitly decrement ref counts.
     Set vbCar = Nothing
     Set atlCar = Nothing
+
+        Set atlBoat = Nothing
 End Sub
