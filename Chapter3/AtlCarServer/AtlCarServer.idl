@@ -1,0 +1,40 @@
+// AtlCarServer.idl : IDL source for AtlCarServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AtlCarServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(900099E7-ADD4-4847-B369-715EE0CD6EBD),
+	
+		helpstring("IComCar Interface"),
+		pointer_default(unique)
+	]
+	interface IComCar : IUnknown
+	{
+		[helpstring("method SpeedUp")] HRESULT SpeedUp([in] long data);
+		[helpstring("method TurnOnRadio")] HRESULT TurnOnRadio([in] RADIOTYPE make);
+	};
+
+[
+	uuid(222C8766-9533-46D6-BE7A-0025CD9B8E7D),
+	version(1.0),
+	helpstring("AtlCarServer 1.0 Type Library")
+]
+library ATLCARSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(9BE1798A-37E4-4E2D-BAB2-A36C8947FD41),
+		helpstring("ComCar Class")
+	]
+	coclass ComCar
+	{
+		[default] interface IComCar;
+	};
+};

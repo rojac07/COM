@@ -1,0 +1,25 @@
+HKCR
+{
+	AtlCarServer.ComBoat.1 = s 'ComBoat Class'
+	{
+		CLSID = s '{762363AD-24EA-4D0D-8D59-BBAD50CC2681}'
+	}
+	AtlCarServer.ComBoat = s 'ComBoat Class'
+	{
+		CLSID = s '{762363AD-24EA-4D0D-8D59-BBAD50CC2681}'
+		CurVer = s 'AtlCarServer.ComBoat.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {762363AD-24EA-4D0D-8D59-BBAD50CC2681} = s 'ComBoat Class'
+		{
+			ProgID = s 'AtlCarServer.ComBoat.1'
+			VersionIndependentProgID = s 'AtlCarServer.ComBoat'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{2EE867E1-C237-48FC-B6C7-D2804FB52C68}'
+		}
+	}
+}
