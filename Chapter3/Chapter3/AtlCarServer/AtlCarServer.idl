@@ -68,6 +68,7 @@ typedef enum RADIOTYPE
 	]
 	interface IComBoat : IUnknown
 	{		
+		[helpstring("method Swimming")] HRESULT Swimming();
 	};
 
 [

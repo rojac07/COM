@@ -2,7 +2,7 @@
 
 
 /* File created by MIDL compiler version 5.01.0164 */
-/* at Wed Sep 16 15:55:46 2015
+/* at Wed Sep 16 16:02:34 2015
  */
 /* Compiler settings for C:\Learning\COM\Chapter3\Chapter3\AtlCarServer\AtlCarServer.idl:
     Oicf (OptLev=i2), W1, Zp8, env=Win32, ms_ext, c_ext
@@ -235,6 +235,8 @@ const CInterfaceStubVtbl _IJetStubVtbl =
 extern const MIDL_STUB_DESC Object_StubDesc;
 
 
+extern const MIDL_SERVER_INFO IComBoat_ServerInfo;
+
 #pragma code_seg(".orpc")
 
 static const MIDL_STUB_DESC Object_StubDesc = 
@@ -261,20 +263,48 @@ static const MIDL_STUB_DESC Object_StubDesc =
     0   /* Reserved5 */
     };
 
-CINTERFACE_PROXY_VTABLE(3) _IComBoatProxyVtbl = 
-{
+static const unsigned short IComBoat_FormatStringOffsetTable[] = 
+    {
+    56
+    };
+
+static const MIDL_SERVER_INFO IComBoat_ServerInfo = 
+    {
+    &Object_StubDesc,
     0,
+    __MIDL_ProcFormatString.Format,
+    &IComBoat_FormatStringOffsetTable[-3],
+    0,
+    0,
+    0,
+    0
+    };
+
+static const MIDL_STUBLESS_PROXY_INFO IComBoat_ProxyInfo =
+    {
+    &Object_StubDesc,
+    __MIDL_ProcFormatString.Format,
+    &IComBoat_FormatStringOffsetTable[-3],
+    0,
+    0,
+    0
+    };
+
+CINTERFACE_PROXY_VTABLE(4) _IComBoatProxyVtbl = 
+{
+    &IComBoat_ProxyInfo,
     &IID_IComBoat,
     IUnknown_QueryInterface_Proxy,
     IUnknown_AddRef_Proxy,
-    IUnknown_Release_Proxy
+    IUnknown_Release_Proxy ,
+    (void *)-1 /* IComBoat::Swimming */
 };
 
 const CInterfaceStubVtbl _IComBoatStubVtbl =
 {
     &IID_IComBoat,
-    0,
-    3,
+    &IComBoat_ServerInfo,
+    4,
     0, /* pure interpreted */
     CStdStubBuffer_METHODS
 };
@@ -374,6 +404,9 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 /* 54 */	0x8,		/* FC_LONG */
 			0x0,		/* 0 */
 
+	/* Procedure Swimming */
+
+
 	/* Procedure TakeOff */
 
 
@@ -392,6 +425,9 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 /* 68 */	NdrFcShort( 0x8 ),	/* 8 */
 /* 70 */	0x4,		/* Oi2 Flags:  has return, */
 			0x1,		/* 1 */
+
+	/* Return value */
+
 
 	/* Return value */
 

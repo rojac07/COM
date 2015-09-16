@@ -27,6 +27,7 @@ END_COM_MAP()
 
 // IComBoat
 public:
+	STDMETHOD(Swimming)();
 };
 
 #endif //__COMBOAT_H_

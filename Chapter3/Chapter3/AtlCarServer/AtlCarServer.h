@@ -2,7 +2,7 @@
 
 
 /* File created by MIDL compiler version 5.01.0164 */
-/* at Wed Sep 16 15:55:46 2015
+/* at Wed Sep 16 16:02:34 2015
  */
 /* Compiler settings for C:\Learning\COM\Chapter3\Chapter3\AtlCarServer\AtlCarServer.idl:
     Oicf (OptLev=i2), W1, Zp8, env=Win32, ms_ext, c_ext
@@ -423,6 +423,8 @@ EXTERN_C const IID IID_IComBoat;
     IComBoat : public IUnknown
     {
     public:
+        virtual /* [helpstring] */ HRESULT STDMETHODCALLTYPE Swimming( void) = 0;
+        
     };
     
 #else 	/* C style interface */
@@ -440,6 +442,9 @@ EXTERN_C const IID IID_IComBoat;
             IComBoat __RPC_FAR * This);
         
         ULONG ( STDMETHODCALLTYPE __RPC_FAR *Release )( 
+            IComBoat __RPC_FAR * This);
+        
+        /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE __RPC_FAR *Swimming )( 
             IComBoat __RPC_FAR * This);
         
         END_INTERFACE
@@ -465,11 +470,25 @@ EXTERN_C const IID IID_IComBoat;
     (This)->lpVtbl -> Release(This)
 
 
+#define IComBoat_Swimming(This)	\
+    (This)->lpVtbl -> Swimming(This)
+
 #endif /* COBJMACROS */
 
 
 #endif 	/* C style interface */
 
+
+
+/* [helpstring] */ HRESULT STDMETHODCALLTYPE IComBoat_Swimming_Proxy( 
+    IComBoat __RPC_FAR * This);
+
+
+void __RPC_STUB IComBoat_Swimming_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
 
 
 
