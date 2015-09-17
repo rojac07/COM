@@ -10,7 +10,8 @@
 class ATL_NO_VTABLE CComBoat : 
 	public CComObjectRootEx<CComSingleThreadModel>,
 	public CComCoClass<CComBoat, &CLSID_ComBoat>,
-	public IComBoat
+	public IComBoat,
+	public ITurboBoat
 {
 public:
 	CComBoat()
@@ -23,10 +24,12 @@ DECLARE_PROTECT_FINAL_CONSTRUCT()
 
 BEGIN_COM_MAP(CComBoat)
 	COM_INTERFACE_ENTRY(IComBoat)
+	COM_INTERFACE_ENTRY(ITurboBoat)
 END_COM_MAP()
 
 // IComBoat
 public:
+	STDMETHOD(TurboSwimming)();
 	STDMETHOD(Swimming)();
 };
 

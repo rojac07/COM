@@ -13,3 +13,11 @@ STDMETHODIMP CComBoat::Swimming()
 	return S_OK;
 }
 
+
+STDMETHODIMP CComBoat::TurboSwimming()
+{
+	// TODO: Add your implementation code here
+	MessageBox(NULL, "ComBoat::TurboSwimming()", "Com Boat", MB_OK);
+
+	return S_OK;
+}

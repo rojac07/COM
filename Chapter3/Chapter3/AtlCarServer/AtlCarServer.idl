@@ -37,6 +37,25 @@ typedef enum RADIOTYPE
 		[helpstring("method TurnOnRadio")] HRESULT TurnOnRadio([in] RADIOTYPE make);
 	};
 	
+
+
+
+    [
+		object,
+		uuid(EE6EBFBB-3DA6-4cce-A867-03241E476559),
+		oleautomation,
+		helpstring("ITurboBoat Interface"),
+		pointer_default(unique)
+	]
+	interface ITurboBoat: IUnknown
+	{
+		
+		[helpstring("method TurboSwimming")] HRESULT TurboSwimming();
+	};
+
+
+
+
 	[
 		object,
 		uuid(E98B898C-5C0A-4318-AFCB-541695E4945D),
@@ -106,5 +125,6 @@ library ATLCARSERVERLib
 	coclass ComBoat
 	{
 		[default] interface IComBoat;
+		interface ITurboBoat;
 	};
 };
