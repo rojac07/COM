@@ -70,7 +70,7 @@ Option Explicit
 ' The cars.
  Private vbCar As Vb6CarServer.CoCar
  Private atlCar As ATLCARSERVERLib.ComCar
- Private atlBoat As ATLCARSERVERLib.comBoat
+ Private atlBoat As ATLCARSERVERLib.ComBoat
  
  
 
@@ -95,13 +95,21 @@ Private Sub btnUseVb6Car_Click()
     Dim itfVbTurbo As IVBTurbo
     Set itfVbTurbo = vbCar
     itfVbTurbo.TurboBlast
+
     txtCurrVbSpeed.Text = vbCar.Speed
     Set itfVbTurbo = Nothing
 End Sub
 
 Private Sub Command1_Click()
   
-  atlBoat.Swimming
+   atlBoat.Swimming
+   
+   
+   
+   Dim iTurboBoat As ATLCARSERVERLib.iTurboBoat
+   Set iTurboBoat = atlBoat
+   iTurboBoat.TurboSwimming
+
   
  
 End Sub
@@ -110,7 +118,7 @@ Private Sub Form_Load()
     Set vbCar = New Vb6CarServer.CoCar
     Set atlCar = New ATLCARSERVERLib.ComCar
     
-    Set atlBoat = New ATLCARSERVERLib.comBoat
+    Set atlBoat = New ATLCARSERVERLib.ComBoat
     
 End Sub
 

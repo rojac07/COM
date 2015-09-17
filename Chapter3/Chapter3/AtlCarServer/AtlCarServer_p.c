@@ -2,7 +2,7 @@
 
 
 /* File created by MIDL compiler version 5.01.0164 */
-/* at Wed Sep 16 16:02:34 2015
+/* at Thu Sep 17 15:31:33 2015
  */
 /* Compiler settings for C:\Learning\COM\Chapter3\Chapter3\AtlCarServer\AtlCarServer.idl:
     Oicf (OptLev=i2), W1, Zp8, env=Win32, ms_ext, c_ext
@@ -109,6 +109,63 @@ const CInterfaceStubVtbl _IComCarStubVtbl =
     &IID_IComCar,
     &IComCar_ServerInfo,
     5,
+    0, /* pure interpreted */
+    CStdStubBuffer_METHODS
+};
+
+
+/* Object interface: ITurboBoat, ver. 0.0,
+   GUID={0xEE6EBFBB,0x3DA6,0x4cce,{0xA8,0x67,0x03,0x24,0x1E,0x47,0x65,0x59}} */
+
+
+extern const MIDL_STUB_DESC Object_StubDesc;
+
+
+extern const MIDL_SERVER_INFO ITurboBoat_ServerInfo;
+
+#pragma code_seg(".orpc")
+static const unsigned short ITurboBoat_FormatStringOffsetTable[] = 
+    {
+    56
+    };
+
+static const MIDL_SERVER_INFO ITurboBoat_ServerInfo = 
+    {
+    &Object_StubDesc,
+    0,
+    __MIDL_ProcFormatString.Format,
+    &ITurboBoat_FormatStringOffsetTable[-3],
+    0,
+    0,
+    0,
+    0
+    };
+
+static const MIDL_STUBLESS_PROXY_INFO ITurboBoat_ProxyInfo =
+    {
+    &Object_StubDesc,
+    __MIDL_ProcFormatString.Format,
+    &ITurboBoat_FormatStringOffsetTable[-3],
+    0,
+    0,
+    0
+    };
+
+CINTERFACE_PROXY_VTABLE(4) _ITurboBoatProxyVtbl = 
+{
+    &ITurboBoat_ProxyInfo,
+    &IID_ITurboBoat,
+    IUnknown_QueryInterface_Proxy,
+    IUnknown_AddRef_Proxy,
+    IUnknown_Release_Proxy ,
+    (void *)-1 /* ITurboBoat::TurboSwimming */
+};
+
+const CInterfaceStubVtbl _ITurboBoatStubVtbl =
+{
+    &IID_ITurboBoat,
+    &ITurboBoat_ServerInfo,
+    4,
     0, /* pure interpreted */
     CStdStubBuffer_METHODS
 };
@@ -412,6 +469,9 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 
 	/* Procedure TurboBlast */
 
+
+	/* Procedure TurboSwimming */
+
 /* 56 */	0x33,		/* FC_AUTO_HANDLE */
 			0x6c,		/* Old Flags:  object, Oi2 */
 /* 58 */	NdrFcLong( 0x0 ),	/* 0 */
@@ -425,6 +485,9 @@ static const MIDL_PROC_FORMAT_STRING __MIDL_ProcFormatString =
 /* 68 */	NdrFcShort( 0x8 ),	/* 8 */
 /* 70 */	0x4,		/* Oi2 Flags:  has return, */
 			0x1,		/* 1 */
+
+	/* Return value */
+
 
 	/* Return value */
 
@@ -463,6 +526,7 @@ const CInterfaceProxyVtbl * _AtlCarServer_ProxyVtblList[] =
     ( CInterfaceProxyVtbl *) &_IComCarProxyVtbl,
     ( CInterfaceProxyVtbl *) &_IComBoatProxyVtbl,
     ( CInterfaceProxyVtbl *) &_IJetProxyVtbl,
+    ( CInterfaceProxyVtbl *) &_ITurboBoatProxyVtbl,
     0
 };
 
@@ -472,6 +536,7 @@ const CInterfaceStubVtbl * _AtlCarServer_StubVtblList[] =
     ( CInterfaceStubVtbl *) &_IComCarStubVtbl,
     ( CInterfaceStubVtbl *) &_IComBoatStubVtbl,
     ( CInterfaceStubVtbl *) &_IJetStubVtbl,
+    ( CInterfaceStubVtbl *) &_ITurboBoatStubVtbl,
     0
 };
 
@@ -481,6 +546,7 @@ PCInterfaceName const _AtlCarServer_InterfaceNamesList[] =
     "IComCar",
     "IComBoat",
     "IJet",
+    "ITurboBoat",
     0
 };
 
@@ -491,9 +557,10 @@ int __stdcall _AtlCarServer_IID_Lookup( const IID * pIID, int * pIndex )
 {
     IID_BS_LOOKUP_SETUP
 
-    IID_BS_LOOKUP_INITIAL_TEST( _AtlCarServer, 4, 2 )
+    IID_BS_LOOKUP_INITIAL_TEST( _AtlCarServer, 5, 4 )
+    IID_BS_LOOKUP_NEXT_TEST( _AtlCarServer, 2 )
     IID_BS_LOOKUP_NEXT_TEST( _AtlCarServer, 1 )
-    IID_BS_LOOKUP_RETURN_RESULT( _AtlCarServer, 4, *pIndex )
+    IID_BS_LOOKUP_RETURN_RESULT( _AtlCarServer, 5, *pIndex )
     
 }
 
@@ -504,7 +571,7 @@ const ExtendedProxyFileInfo AtlCarServer_ProxyFileInfo =
     (const PCInterfaceName * ) & _AtlCarServer_InterfaceNamesList,
     0, // no delegation
     & _AtlCarServer_IID_Lookup, 
-    4,
+    5,
     2,
     0, /* table of [async_uuid] interfaces */
     0, /* Filler1 */

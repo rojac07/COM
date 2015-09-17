@@ -2,7 +2,7 @@
 
 
 /* File created by MIDL compiler version 5.01.0164 */
-/* at Wed Sep 16 16:02:34 2015
+/* at Thu Sep 17 15:31:33 2015
  */
 /* Compiler settings for C:\Learning\COM\Chapter3\Chapter3\AtlCarServer\AtlCarServer.idl:
     Oicf (OptLev=i2), W1, Zp8, env=Win32, ms_ext, c_ext
@@ -41,6 +41,12 @@ extern "C"{
 #define __IComCar_FWD_DEFINED__
 typedef interface IComCar IComCar;
 #endif 	/* __IComCar_FWD_DEFINED__ */
+
+
+#ifndef __ITurboBoat_FWD_DEFINED__
+#define __ITurboBoat_FWD_DEFINED__
+typedef interface ITurboBoat ITurboBoat;
+#endif 	/* __ITurboBoat_FWD_DEFINED__ */
 
 
 #ifndef __ITurbo_FWD_DEFINED__
@@ -114,7 +120,8 @@ enum RADIOTYPE
 	AM_RADIO	= CD + 1,
 	FM_RADIO	= AM_RADIO + 1,
 	NONE	= FM_RADIO + 1,
-	NONE1	= NONE + 1
+	NONE1	= NONE + 1,
+	NONE2	= NONE1 + 1
     }	RADIOTYPE;
 
 
@@ -232,6 +239,93 @@ void __RPC_STUB IComCar_TurnOnRadio_Stub(
 
 
 #endif 	/* __IComCar_INTERFACE_DEFINED__ */
+
+
+#ifndef __ITurboBoat_INTERFACE_DEFINED__
+#define __ITurboBoat_INTERFACE_DEFINED__
+
+/* interface ITurboBoat */
+/* [unique][helpstring][oleautomation][uuid][object] */ 
+
+
+EXTERN_C const IID IID_ITurboBoat;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("EE6EBFBB-3DA6-4cce-A867-03241E476559")
+    ITurboBoat : public IUnknown
+    {
+    public:
+        virtual /* [helpstring] */ HRESULT STDMETHODCALLTYPE TurboSwimming( void) = 0;
+        
+    };
+    
+#else 	/* C style interface */
+
+    typedef struct ITurboBoatVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE __RPC_FAR *QueryInterface )( 
+            ITurboBoat __RPC_FAR * This,
+            /* [in] */ REFIID riid,
+            /* [iid_is][out] */ void __RPC_FAR *__RPC_FAR *ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE __RPC_FAR *AddRef )( 
+            ITurboBoat __RPC_FAR * This);
+        
+        ULONG ( STDMETHODCALLTYPE __RPC_FAR *Release )( 
+            ITurboBoat __RPC_FAR * This);
+        
+        /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE __RPC_FAR *TurboSwimming )( 
+            ITurboBoat __RPC_FAR * This);
+        
+        END_INTERFACE
+    } ITurboBoatVtbl;
+
+    interface ITurboBoat
+    {
+        CONST_VTBL struct ITurboBoatVtbl __RPC_FAR *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define ITurboBoat_QueryInterface(This,riid,ppvObject)	\
+    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+
+#define ITurboBoat_AddRef(This)	\
+    (This)->lpVtbl -> AddRef(This)
+
+#define ITurboBoat_Release(This)	\
+    (This)->lpVtbl -> Release(This)
+
+
+#define ITurboBoat_TurboSwimming(This)	\
+    (This)->lpVtbl -> TurboSwimming(This)
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+/* [helpstring] */ HRESULT STDMETHODCALLTYPE ITurboBoat_TurboSwimming_Proxy( 
+    ITurboBoat __RPC_FAR * This);
+
+
+void __RPC_STUB ITurboBoat_TurboSwimming_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
+
+#endif 	/* __ITurboBoat_INTERFACE_DEFINED__ */
 
 
 #ifndef __ITurbo_INTERFACE_DEFINED__

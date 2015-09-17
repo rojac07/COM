@@ -1,7 +1,7 @@
 Type=Exe
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\Windows\system32\stdole2.tlb#OLE Automation
-Reference=*\G{2EE867E1-C237-48FC-B6C7-D2804FB52C68}#1.0#0#..\AtlCarServer\Debug\AtlCarServer.dll#AtlCarServer 1.0 Type Library
 Reference=*\G{43CE9FC8-6465-4BB2-A8C4-698478DA7B55}#1.0#0#..\Vb6CarServer\Vb6CarServer.dll#Vb6CarServer
+Reference=*\G{2EE867E1-C237-48FC-B6C7-D2804FB52C68}#1.0#0#..\AtlCarServer\Debug\AtlCarServer.dll#AtlCarServer 1.0 Type Library
 Form=Form1.frm
 Startup="Form1"
 ExeName32="Project1.exe"

@@ -14,15 +14,20 @@ until then...
 import "oaidl.idl";
 import "ocidl.idl";
 
-typedef enum RADIOTYPE
-{
-	EIGHT_TRACK,
-	CD,
-	AM_RADIO,
-	FM_RADIO,
-	NONE,
-	NONE1
-} RADIOTYPE;
+
+		
+	typedef enum RADIOTYPE
+	{
+		EIGHT_TRACK,
+		CD,
+		AM_RADIO,
+		FM_RADIO,
+		NONE,
+		NONE1,
+		NONE2
+
+	} RADIOTYPE;
+
 
 	[
 		object,
@@ -92,8 +97,8 @@ typedef enum RADIOTYPE
 
 [
 	uuid(2EE867E1-C237-48FC-B6C7-D2804FB52C68),
-	version(1.0),
-	helpstring("AtlCarServer 1.0 Type Library")
+	version(1.1),
+	helpstring("AtlCarServer 1.1 Type Library")
 ]
 library ATLCARSERVERLib
 {
@@ -106,8 +111,8 @@ library ATLCARSERVERLib
 	]
 	coclass ComCar
 	{
-		[default] interface IComCar;
-		interface ITurbo;
+		 interface IComCar;
+		[default] interface ITurbo;
 	};
 	[
 		uuid(F37C6BDC-F790-45A9-91CA-1A3DCDAC7C42),
@@ -124,7 +129,7 @@ library ATLCARSERVERLib
 	]
 	coclass ComBoat
 	{
-		[default] interface IComBoat;
-		interface ITurboBoat;
+		interface IComBoat;
+		[default] interface ITurboBoat;
 	};
 };
