@@ -1,0 +1,4 @@
+C:\Projects\COM\GeneratingProxyClasses\ClassLibrary1Example\ClassLibrary1Example\bin\Debug\ClassLibrary1Example.dll
+C:\Projects\COM\GeneratingProxyClasses\ClassLibrary1Example\ClassLibrary1Example\bin\Debug\ClassLibrary1Example.pdb
+C:\Projects\COM\GeneratingProxyClasses\ClassLibrary1Example\ClassLibrary1Example\obj\Debug\ClassLibrary1Example.dll
+C:\Projects\COM\GeneratingProxyClasses\ClassLibrary1Example\ClassLibrary1Example\obj\Debug\ClassLibrary1Example.pdb
